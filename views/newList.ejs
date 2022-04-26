@@ -1,0 +1,14 @@
+<%- include("header") -%>
+
+<form action="/newList" method="post">
+
+<div class="box" id="heading">
+    <input type="text" name="newListTitle" value="<%=listTitle%>" placeholder="New List Title" autocomplete="off">
+</div>
+
+<div class="new-list-btn-container">
+    <button class="new-list-submit" type="submit" name="list" value="<%=listTitle%>">Done</button>
+</div>
+</form>
+
+<%- include("footer") -%>

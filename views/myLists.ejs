@@ -1,0 +1,22 @@
+<%- include("header") -%>
+
+<div class="my-lists-page-title">
+    <h1 class="list-page-title"> My Lists </h1>
+  </div>
+
+<% listTitle.forEach(function(listTitle){ %>
+
+<form action="/myLists" method="post" class="list-form">
+    <div class="list-box">
+        <a href="/<%= listTitle %>" class="list-link">
+            <h1> <%= listTitle %> </h1>
+        </a>
+        <a href="/delete/<%= listTitle %>">
+            <i class="fa-solid fa-trash-can"></i>
+        </a>
+    </div>
+</form>
+
+<% }); %>
+
+<%- include("footer") -%>
